@@ -1,0 +1,18 @@
+#!/bin/bash
+tv=(lg sony samsung vu mi)
+netflix=(y y n n y)
+n=${#tv[@]}
+m=0
+while [ $n -gt $m ]
+do
+
+
+	if [[ (${tv[$m]} == "lg" || ${tv[$m]} == "sony" || ${tv[$m]} == "samsung" || ${tv[$m]} == "vu" || ${tv[$m]} == "mi") && ${netflix[$m]} -eq "y" ]]; then
+
+
+		echo ${tv[$m]} has netflix ${netflix[$m]}
+	 else
+		echo ${tv[$m]} has no netflix
+	fi
+     m=$(( m+1 ))
+done

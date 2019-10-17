@@ -1,0 +1,8 @@
+#!/bin/bash
+arr=(s a i a j a y)
+n=${#arr[@]}
+while [ $n -gt 0 ]
+do
+echo ${arr[$((n-1))]}
+n=$(( n-1 ))
+done

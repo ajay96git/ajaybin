@@ -1,0 +1,24 @@
+#!/bin/bash
+read -p "enter the budget :" budget
+	if [[ $budget -lt 40000 ]]; then
+		read -p "choose the android phone options from  below : oneplus,xiaomi,huawei,s10:" android
+			if [[ $android == "oneplus" ]]; then
+				echo " oneplus price is 35000 "
+			elif [[ $andriod == "xiaomi" ]]; then
+				echo " xiaomi price is 25000"
+			elif [[ $android == "huawei" ]]; then
+				echo "huawei price is 40000"
+			elif [[ $android == "s10" ]]; then
+				echo "s10 price is 40000"
+			fi
+	elif [[ $budget -gt 40000 ]]; then
+		read -p "choose the apple  phone options from  below : iphone11pro,iphone x,iphone xr:" apple
+			if [[ $apple == "iphone11pro" ]]; then
+                                echo " iphone11pro price is 1lakh "
+                        elif [[ $apple == "iphone x" ]]; then
+                                echo " iphone x price is 70000"
+                        elif [[ $apple == "iphone xr" ]]; then
+                                echo "iphone xr price is 50000"
+			fi
+	fi
+ 

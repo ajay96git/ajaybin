@@ -1,0 +1,29 @@
+if [[ $1 -eq 1 ]]; then
+	if [[ $2 -eq 850000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 90000 for level1 emp
+  		else
+			echo bonus is not required 
+		fi
+	elif [[ $2 -eq 650000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 50000 for level1 emp
+		else
+			echo bonus is not required
+		fi
+	fi
+ elif [[ $1 -eq 2 ]]; then
+	if [[ $2 -eq 550000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 30000 for level2 emp
+		else
+			echo bonus is not required
+		fi
+	elif [[ $2 -eq 350000 ]]; then
+     		if [[ $3 == "no" ]]; then
+			echo bonus 20000 for level2 emp
+		else
+			echo bonus is not required
+		fi
+	fi
+  fi

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sum()
+{
+add=$(( $1 + $2 ))
+echo $add
+}
+sum  2 3
+

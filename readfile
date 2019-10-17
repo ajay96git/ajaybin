@@ -1,0 +1,10 @@
+#!/bin/bash
+while read v_ajay
+do
+
+if [[ $(echo $v_ajay|grep -o AJAY) == "AJAY" ]]; then
+	echo $v_ajay|sed 's/ajay/saiajay/gi'
+fi
+
+done<forex
+

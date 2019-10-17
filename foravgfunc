@@ -1,0 +1,21 @@
+#!/bin/bash
+avg()
+{
+for k in $@
+do
+	m=$(( m + $k ))
+done
+echo avg is:$(( m / $# ))
+}
+
+for i in $@
+do
+	for j in $(seq 1 $i)
+	do
+		arr[$(( j - 1 ))]=$j
+	#echo ${arr[@]} hello
+	done
+	m=0
+	avg "${arr[@]}"
+	arr=()
+done

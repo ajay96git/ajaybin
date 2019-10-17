@@ -1,0 +1,12 @@
+#!/bin/bash
+arr=(a j a y p r a n n o y)
+n=${#arr[@]}
+m=0
+while [ $n -gt $m ] 
+do
+	echo "this element:"${arr[$m]} "is in:"$m
+        
+	m=$(( m+1 ))
+	
+	
+done

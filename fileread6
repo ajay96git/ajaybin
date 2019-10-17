@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+for i in *
+do
+n=1
+	while read linex
+	do
+
+		if [[ $n -eq 5 ]]; then
+			echo $linex is 5th line of file $i
+		fi
+	
+		n=$(( n + 1 ))
+
+	done<$i
+done

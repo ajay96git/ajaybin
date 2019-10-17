@@ -1,0 +1,16 @@
+#!/bin/bash
+
+arr=(s a i a j a y ':' s a i p r a n n o y ':'  t h a n u)
+n=${#arr[@]}
+m=0
+while(( $((n-m)) ))
+do
+
+	if [[ ${arr[$m]} ==  ':' ]]; then
+		echo " "
+	else		
+		echo ${arr[$m]}
+	fi
+	m=$((m+1))
+
+done

@@ -1,0 +1,25 @@
+#!/bin/bash
+n=$1
+e=0
+o=0
+while [[ $n -lt $2 ]]
+do
+	if [[ $(( n%2 )) -eq 0 ]]; then
+		even[$e]=$n
+	       e=$(( e + 1 ))
+	elif [[ $(( n%2 )) -ne 0 ]]; then
+		odd[$o]=$n
+	       o=$(( o + 1 ))
+	fi
+	n=$(( n + 1 ))
+
+done
+
+
+echo  "even Numbers are: " 
+echo  ${even[@]}
+echo "odd  Numbers are: " 
+echo  ${odd[@]}
+
+
+

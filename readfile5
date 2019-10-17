@@ -1,0 +1,8 @@
+#!/bin/bash
+for var in *
+do
+	sed  's/a/ajay/2' $var 
+	if [[ $(sed 's/a/ajay/2' $var |grep -o ajay |sort -u) == "ajay" ]]; then
+		echo a has been rplaced with ajay in file $var
+	fi
+done

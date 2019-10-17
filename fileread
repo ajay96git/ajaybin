@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for v_file in *
+do
+	sed -n '2p' $v_file
+done

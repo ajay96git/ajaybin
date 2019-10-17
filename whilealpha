@@ -1,0 +1,12 @@
+#!/bin/bash
+bsa=("$@")
+n=${#bsa[@]}
+m=0
+while [ $n -gt $m ]
+do
+	if [[ ${bsharr[$m] == ${bsa[$m]} ]]
+	[$m]=${bsa[$m]}
+	fi
+m=$(( m + 1 ))
+done
+

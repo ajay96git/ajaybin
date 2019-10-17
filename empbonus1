@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [[ $1 -eq 1 ]]; then
+	if [[ $2 -gt 800000 ]]; then
+		if [[ $2 -lt 1000000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 90000 for level1 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	elif [[ $1 -gt 600000 ]]; then
+		if [[ $1 -lt 700000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 50000 for level1 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	fi
+
+elif [[ $1 -eq 2 ]]; then
+        if [[ $2 -gt 500000 ]]; then
+		if [[ $2 -lt 600000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 30000 for level2 employee
+			else
+				echo bonus is not required
+			fi
+ 		fi
+	elif [[ $2 -gt 300000 ]]; then
+		if [[ $2 -lt 400000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 20000 for level2 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	fi
+fi

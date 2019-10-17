@@ -1,0 +1,6 @@
+#!/bin/bash
+rm sedout||true
+for var in *
+do
+	sed  's/a/ajay/2' $var >> sedout
+done

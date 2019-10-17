@@ -1,0 +1,660 @@
+#!/bin/bash
+#areajay of circle aoc = 3.14 * $1 * $1
+aoc=$(( 3 * $(( $1 * $1 )) ))   
+echo $aoc
+#!/bin/bash
+
+sum()
+{
+add=$(( $1 + $2 ))
+echo $add
+}
+sum  2 3
+
+if [[ $# -eq 2 ]]; then
+
+	echo sum is $(( ($1+$2)  ))
+
+
+elif [[ $# -eq 3 ]]; then
+
+	echo mul is $(( ($1*$2*$3) ))
+
+elif [[ $# -eq 4 ]]; then
+	
+	echo avg is $(( ($1+$2+$3+$4)/$# ))
+
+
+elif [[ $# -eq 5 ]]; then
+     	
+	echo $(( (($1*$2*$3*$4*$5)/($1+$2+$3+$4+$5)) * (($1+$2+$3+$4+$5)/$#)   )) 
+fi
+echo $(( $1+$2+$3 ))
+echo $0
+echo $@
+echo $*
+echo $#
+if [[ $1 -eq 1 ]]; then
+	if [[ $2 -eq 850000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 90000 for level1 emp
+  		else
+			echo bonus is not required 
+		fi
+	elif [[ $2 -eq 650000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 50000 for level1 emp
+		else
+			echo bonus is not required
+		fi
+	fi
+ elif [[ $1 -eq 2 ]]; then
+	if [[ $2 -eq 550000 ]]; then
+		if [[ $3 == "no" ]]; then
+			echo bonus 30000 for level2 emp
+		else
+			echo bonus is not required
+		fi
+	elif [[ $2 -eq 350000 ]]; then
+     		if [[ $3 == "no" ]]; then
+			echo bonus 20000 for level2 emp
+		else
+			echo bonus is not required
+		fi
+	fi
+  fi
+#!/bin/bash
+
+if [[ $1 -eq 1 ]]; then
+	if [[ $2 -gt 800000 ]]; then
+		if [[ $2 -lt 1000000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 90000 for level1 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	elif [[ $1 -gt 600000 ]]; then
+		if [[ $1 -lt 700000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 50000 for level1 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	fi
+
+elif [[ $1 -eq 2 ]]; then
+        if [[ $2 -gt 500000 ]]; then
+		if [[ $2 -lt 600000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 30000 for level2 employee
+			else
+				echo bonus is not required
+			fi
+ 		fi
+	elif [[ $2 -gt 300000 ]]; then
+		if [[ $2 -lt 400000 ]]; then
+			if [[ $3 == no ]]; then
+				echo bonus 20000 for level2 employee
+			else
+				echo bonus is not required
+			fi
+		fi
+	fi
+fi
+#! /bin/bash
+if [[ ($1 -eq 1 && $2 -gt 800000 && $2 -lt 1000000 && $3 == "no")  || ($1 -eq 1 && $2 -gt 600000 && $2 -lt 700000 && $3 == "no") ]]; then
+		
+		echo "90000 bonus for employee who earning 8-10 lajaykhs"
+		echo "50000 bonus for employee who earning 6-7 lajaykhs"
+	
+	
+elif [[  $1 -eq 2 && $2 -gt 500000 && $2 -lt 600000 && $3 == "no"  || $1 -eq 2 && $2 -gt 300000 && $2 -lt 400000 && $3 == "no" ]]; then
+			
+		 echo "30000 bonus for employee who earning 5-6 lajaykhs"
+                 echo "20000 bonus for employee who earning 3-4 lajaykhs"
+        else
+                echo "bonus is not required"
+fi
+
+   
+#!/bin/bash
+
+for v_file in *
+do
+	sed -n '2p' $v_file
+done
+#!/bin/bash
+rm sedout||true
+for var in *
+do
+	sed  's/a/ajayjay/2' $var >> sedout
+done
+#!/bin/bash
+inp=(5 j q l 4 7 r f 8 2 f 224 g g)
+alf=(ajay b c d e f g h i j k l m n o p q r s t u v w x y z)
+cnt=0
+
+for i in ${inp[@]}
+do
+	cnt1=0
+	for j in ${alf[@]}
+	do
+		if [[ $i == $j  ]]; then    
+	
+			abc[$cnt]=$i
+			cnt=$((cnt+1))
+			break
+		else
+		
+#set -x
+			#echo $cnt1 $i $j
+			if [[ $cnt1 -eq  25 ]]; then 
+#set +x				#echo hello ajajayy
+				num[$cnt1]=$i
+				cnt1=$((cnt1+1)) 
+			else
+				cnt1=$((cnt1+1)) 
+				continue
+			fi	
+		fi
+	done
+done
+
+echo "alphajaybets are:" ${abc[@]}
+echo "numbers are:" ${num[@]}
+
+#!/bin/sh
+n=0
+arr=(5 10 15 20 25 30)
+for i in ${arr[@]} 
+do
+	arr1[$n]=$(( 3.14 * $(( i * i )) ))
+	n=$(( n + 1 ))
+done
+echo ${arr1[@]}
+#!/bin/bash
+avg()
+{
+for k in $@
+do
+	m=$(( m + $k ))
+done
+echo avg is:$(( m / $# ))
+}
+
+for i in $@
+do
+	for j in $(seq 1 $i)
+	do
+		arr[$(( j - 1 ))]=$j
+	#echo ${arr[@]} hello
+	done
+	m=0
+	avg "${ajayrr[@]}"
+	arr=()
+done
+#!/bin/bash
+for i in $(seq $1 $2) 
+do
+	if [[ $(( i % 2 )) -eq 0 && $3 == "even" ]]; then
+		echo $i is even
+	elif [[ $(( i % 2 )) -ne 0 && $3 == "odd" ]]; then
+		echo $i is odd
+
+	fi
+done
+
+
+<<gnan
+
+	if [[ $3 == "even" ]]; then				
+	
+		echo $i is even
+	
+	fi
+
+else
+
+	if [[ $3 == "odd" ]]; then
+
+		echo $i is odd
+
+	fi
+fi
+done
+gnan
+#!/bin/bash
+arr=(ajayjay prannoy thanu ishu ajay gnan siddhu ajay AJAY)
+for name in $(seq 0 3)
+do
+ echo ${arr[ $(( 0 + najayme ))]}
+done
+#!/bin/bash
+arr="s ajay i a j a y p r a n n o y t h a n u"
+#n=${#arr[@]}
+for i in ${arr[@]}
+do
+echo $i
+#n=$(( n - 1 ))
+done
+#!/bin/bash
+arr=(ajay j a y p r a n n o y t h a n u i s h u)
+m=0
+for i in ${arr[@]}
+do
+ 	echo "this element: " $i "in the index: " $m
+  		
+	m=$(( m + 1 ))
+
+
+done
+#!/bin/bash
+arr=(s ajay i a j a y o b i l i)
+n=${#arr[@]}
+for i in ${arr[@]}
+do
+n=$(( n - 1 ))
+arr[$n]=$i
+#n=$(( n - 1 ))
+done
+echo ${arr[@]}
+
+
+
+#!/bin/bash
+n=0
+#m=$1
+for i in $(seq 1 $1)
+do
+n=$(( n + i ))
+done
+echo $(( n / $1 ))
+#!/bin/bash
+if [[ (1 -eq 1 && 1 -eq 0 ) || (1 -eq 0 || 1 -eq 1 ) ]]; then
+
+	echo "this is from group condition block"
+else
+	echo "this is from group else block"
+
+fi
+
+if [[ 1 -eq 1 && 1 -eq 0  ||  1 -eq 0 &&  1 -eq 1  ]]; then
+
+	echo "this is from condition block with no grouping"
+else
+	echo "this is from else block with no grouping"
+	:
+
+fi    
+#!/bin/bash
+
+if [[ $1 -gt $2 ]]; then
+	
+	echo $1 is greater thajayn $2
+else  
+ 	echo $2 is greater thajayn $1
+
+
+fi
+
+
+ 
+if [[ $1 -eq 500 ]];then
+	
+	echo "enter the curency" : $1
+        echo 5 100 notes
+fi
+#!/bin/bash
+mul()
+{
+	mul=$(( $1 * $2 ))
+}
+mul 3 4
+echo $mul
+mul 4 5
+echo $mul
+mul 2 3
+echo $mul
+
+echo hello this is from newsh
+#!/bin/bash
+read -p "enter the budget :" budget
+	if [[ $budget -lt 40000 ]]; then
+		read -p "choose the ajayndroid phone options from  below : oneplus,xiaomi,huawei,s10:" android
+			if [[ $android == "oneplus" ]]; then
+				echo " oneplus price is 35000 "
+			elif [[ $andriod == "xiajayomi" ]]; then
+				echo " xiaomi price is 25000"
+			elif [[ $android == "huajaywei" ]]; then
+				echo "huawei price is 40000"
+			elif [[ $android == "s10" ]]; then
+				echo "s10 price is 40000"
+			fi
+	elif [[ $budget -gt 40000 ]]; then
+		read -p "choose the ajaypple  phone options from  below : iphone11pro,iphone x,iphone xr:" apple
+			if [[ $apple == "iphone11pro" ]]; then
+                                echo " iphone11pro price is 1lakh "
+                        elif [[ $apple == "iphone x" ]]; then
+                                echo " iphone x price is 70000"
+                        elif [[ $apple == "iphone xr" ]]; then
+                                echo "iphone xr price is 50000"
+			fi
+	fi
+ 
+#!/bin/bash
+
+prime()
+{
+
+	if [[ $(($2%2)) -eq  0 ]]; then
+		echo $2 " : is a even number"
+
+	else 
+		echo $2 " : is an odd number"
+	fi
+
+}
+prime 4 56 6
+#!/bin/bash
+while read v_ajayjay
+do
+
+if [[ $(echo $v_ajajayy|grep -o AJAY) == "AJAY" ]]; then
+	echo $v_ajajayy|sed 's/ajay/saiajay/gi'
+fi
+
+done<forex
+
+#!/bin/bash
+while read vajayr
+do
+echo $var
+sed -n -e '5,10p' -n '12,14p'
+done < pbudget
+#!/bin/bash
+
+echo ajajayy
+echo prannoy
+echo thanu
+
+smplefn()
+{
+	echo ishu
+	echo gnan
+	echo siddhu
+	echo $1
+	echo $2
+}
+
+echo " "
+echo " "
+
+smplefn sudhakajayr gopal 
+echo $1
+
+#!/bin/bash
+
+avg()
+{
+
+fa=$(( ($(($1+$2+$3+$4))) / $# ))
+
+fa=$((fajay+365))
+
+fa=$((fajay*45))
+}
+
+ 
+
+avg 2 5 3 6
+echo $fa
+
+
+
+
+avg 4 2346 3 63
+echo $fa
+
+
+
+
+
+ hi
+ ajajayy ajaY
+ hi 
+ Ishu isHu ishu
+ how are you
+ how are you
+ ok111
+ done 
+ how are you
+ ok then
+ bye
+ how are you
+arr[]="ajayjay prannoy thanu ishu"
+while [ $n >= 1 ]
+do
+
+echo ${arr[]}
+n=$n-1
+done
+
+#!/bin/bash
+sum()
+{
+	a=2
+	b=3
+	c=$(( a + b ))
+	echo $c		
+}
+a= $1
+b= $2
+c=$(( $1 + $2 ))
+echo $c
+echo " "
+sum
+
+#!/bin/bash
+tv=(lg sony samsung vu mi)
+netflix=(y y n n y)
+n=${#tv[@]}
+m=0
+while [ $n -gt $m ]
+do
+
+
+	if [[ (${tv[$m]} == "lg" || ${tv[$m]} == "sony" || ${tv[$m]} == "samsung" || ${tv[$m]} == "vu" || ${tv[$m]} == "mi") && ${netflix[$m]} -eq "y" ]]; then
+
+
+		echo ${tv[$m]} has netflix ${netflix[$m]}
+	 else
+		echo ${tv[$m]} has no netflix
+	fi
+     m=$(( m+1 ))
+done
+#!/bin/bash
+bsa=("$@")
+n=${#bsa[@]}
+m=0
+while [ $n -gt $m ]
+do
+	if [[ ${bsharr[$m] == ${bsajay[$m]} ]]
+	[$m]=${bsa[$m]}
+	fi
+m=$(( m + 1 ))
+done
+
+#!/bin/bash
+n=$1
+while [[ $n -lt $2 ]]
+do
+	if [[ $(( n % 2 )) -eq 0 && $3 == "even" ]]; then
+		echo "number:" $n "is even"
+	elif [[ $(( n % 2 )) -ne 0 && $3 == "odd" ]]; then
+		echo "number:" $n "is odd"
+	fi
+	n=$(( n + 1 ))     
+
+done
+#!/bin/bash
+n=$1
+e=0
+o=0
+while [[ $n -lt $2 ]]
+do
+	if [[ $(( n%2 )) -eq 0 ]]; then
+		even[$e]=$n
+	       e=$(( e + 1 ))
+	elif [[ $(( n%2 )) -ne 0 ]]; then
+		odd[$o]=$n
+	       o=$(( o + 1 ))
+	fi
+	n=$(( n + 1 ))
+
+done
+
+
+echo  "even Numbers are: " 
+echo  ${even[@]}
+echo "odd  Numbers are: " 
+echo  ${odd[@]}
+
+
+
+#!/bin/bash
+arr1=(ajayjay prannoy thanu ishu)
+#n=$(( $(echo ${arr1[@]}|wc -w)-1 ))
+n=$(( ${#arr1[@]}-1 ))
+while [ $n -gt  0 ] || [ $n -eq 0 ]
+do
+	echo ${arr1[$n]}
+n=$((n-1))
+done
+
+arr=(ajayjay prannoy thanu ishu)
+n=${#arr[@]}
+while [ $n -gt 0 ]
+do
+echo ${arr[$n]}
+n=$(( n-1 ))
+done
+#!/bin/bash
+
+arr=(s ajay i a j a y)
+n=${#arr[@]}
+m=0
+
+<<cmt
+while [ $n -gt  $m ] 
+do
+echo ${arr[$(( n - $(( n-m )) ))]}
+m=$((m+1))
+done
+cmt
+
+for i in ${arr[@]}
+do
+
+ echo $i
+done
+
+
+arr=(s ajay i a j a y)
+n=${#arr[@]}
+m=$n
+while(( $n - $(( n-m )) ))
+do 
+echo ${arr[$((n-m))]}
+m=$((m-1))
+done
+#!/bin/bash
+arr=(s ajay i a j a y)
+n=${#arr[@]}
+while [ $n -gt 0 ]
+do
+echo ${arr[$((n-1))]}
+n=$(( n-1 ))
+done
+#!/bin/bash
+
+arr=(s ajay i a j a y ':' s a i p r a n n o y ':'  t h a n u)
+n=${#arr[@]}
+m=0
+while(( $((n-m)) ))
+do
+
+	if [[ ${arr[$m]} ==  ':' ]]; then
+		echo " "
+	else		
+		echo ${arr[$m]}
+	fi
+	m=$((m+1))
+
+done
+#!/bin/bash
+a="ajay j a y p r a n n o y t h a n u i s h u"
+arr=()
+cnt=0
+for i in $a
+do 
+	if [[ $i != " " ]]; then
+	
+		arr[$cnt]=$i
+		cnt=$cnt+1	
+
+	fi
+done
+
+echo ${arr[6]}
+
+
+#!/bin/bash
+arr=(ajay j a y p r a n n o y)
+n=${#arr[@]}
+m=0
+while [ $n -gt $m ] 
+do
+	echo "this element:"${arr[$m]} "is in:"$m
+        
+	m=$(( m+1 ))
+	
+	
+done
+#!/bin/bash
+bsa=( "$@" )
+p=${#bsa[@]}
+q=0
+r=0
+s=0
+
+
+while [[ $p -gt $q ]]
+do
+	if [[ ${bsa[$q]}  -gt 25  ||  ${bsajay[$q]} -eq 25 ]]; then
+		arr[$r]=${bsajay[$q]}
+		r=$(( r + 1 ))
+	elif [[ ${bsa[$q]} -lt 25 ]]; then
+		arr1[$s]=${bsajay[$q]}
+		s=$(( s + 1 ))
+	fi
+	q=$(( q + 1 )) 
+done	
+
+echo here the elements greater thajayn 25:  ${arr[@]}
+echo here the elements lesser than 25: ${ajayrr1[@]}
+
+:#!/bin/bash
+arr=(s ajay i a j a y o b i l i p r a n n o y)
+n=${#arr[@]}
+m=0
+o=$n
+while [[ $n -gt $m ]] || [[ $n -eq $m ]]
+do
+arr1[$(( o - n ))]=${ajayrr[$n]}
+#arr1 =${ajayrr[$n]}
+n=$(( n - 1 ))
+done
+echo ${arr1[@]}
+

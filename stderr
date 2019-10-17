@@ -1,0 +1,8 @@
+arr[]="ajay prannoy thanu ishu"
+while [ $n >= 1 ]
+do
+
+echo ${arr[]}
+n=$n-1
+done
+

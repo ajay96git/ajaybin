@@ -1,0 +1,10 @@
+#!/bin/bash
+var=1
+while read sedline
+do
+	if [[ $var -eq 5 ]]; then
+		echo $sedline
+	fi
+		var=$((var+1))
+
+done<forex

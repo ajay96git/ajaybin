@@ -1,0 +1,6 @@
+#!/bin/bash
+while read var
+do
+echo $var
+sed -n -e '5,10p' -e '12,14p'
+done < pbudget

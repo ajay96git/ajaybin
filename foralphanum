@@ -1,0 +1,34 @@
+#!/bin/bash
+inp=(5 j q l 4 7 r f 8 2 f 224 g g)
+alf=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+cnt=0
+
+for i in ${inp[@]}
+do
+	cnt1=0
+	for j in ${alf[@]}
+	do
+		if [[ $i == $j  ]]; then    
+	
+			abc[$cnt]=$i
+			cnt=$((cnt+1))
+			break
+		else
+		
+#set -x
+			#echo $cnt1 $i $j
+			if [[ $cnt1 -eq  25 ]]; then 
+#set +x				#echo hello ajay
+				num[$cnt1]=$i
+				cnt1=$((cnt1+1)) 
+			else
+				cnt1=$((cnt1+1)) 
+				continue
+			fi	
+		fi
+	done
+done
+
+echo "alphabets are:" ${abc[@]}
+echo "numbers are:" ${num[@]}
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo ajay
+echo prannoy
+echo thanu
+
+smplefn()
+{
+	echo ishu
+	echo gnan
+	echo siddhu
+	echo $1
+	echo $2
+}
+
+echo " "
+echo " "
+
+smplefn sudhakar gopal 
+echo $1
+

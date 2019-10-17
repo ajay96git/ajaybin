@@ -1,0 +1,8 @@
+arr=(s a i a j a y)
+n=${#arr[@]}
+m=$n
+while(( $n - $(( n-m )) ))
+do 
+echo ${arr[$((n-m))]}
+m=$((m-1))
+done

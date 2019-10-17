@@ -1,0 +1,10 @@
+#!/bin/bash
+arr1=(ajay prannoy thanu ishu)
+#n=$(( $(echo ${arr1[@]}|wc -w)-1 ))
+n=$(( ${#arr1[@]}-1 ))
+while [ $n -gt  0 ] || [ $n -eq 0 ]
+do
+	echo ${arr1[$n]}
+n=$((n-1))
+done
+

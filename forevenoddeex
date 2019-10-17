@@ -1,0 +1,30 @@
+#!/bin/bash
+for i in $(seq $1 $2) 
+do
+	if [[ $(( i % 2 )) -eq 0 && $3 == "even" ]]; then
+		echo $i is even
+	elif [[ $(( i % 2 )) -ne 0 && $3 == "odd" ]]; then
+		echo $i is odd
+
+	fi
+done
+
+
+<<gnan
+
+	if [[ $3 == "even" ]]; then				
+	
+		echo $i is even
+	
+	fi
+
+else
+
+	if [[ $3 == "odd" ]]; then
+
+		echo $i is odd
+
+	fi
+fi
+done
+gnan

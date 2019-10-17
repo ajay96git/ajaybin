@@ -1,0 +1,9 @@
+#!/bin/sh
+n=0
+arr=(5 10 15 20 25 30)
+for i in ${arr[@]} 
+do
+	arr1[$n]=$(( 3.14 * $(( i * i )) ))
+	n=$(( n + 1 ))
+done
+echo ${arr1[@]}

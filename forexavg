@@ -1,0 +1,8 @@
+#!/bin/bash
+n=0
+#m=$1
+for i in $(seq 1 $1)
+do
+n=$(( n + i ))
+done
+echo $(( n / $1 ))

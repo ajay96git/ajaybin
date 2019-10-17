@@ -1,0 +1,14 @@
+#!/bin/bash
+
+prime()
+{
+
+	if [[ $(($2%2)) -eq  0 ]]; then
+		echo $2 " : is a even number"
+
+	else 
+		echo $2 " : is an odd number"
+	fi
+
+}
+prime 4 56 6

@@ -1,0 +1,13 @@
+#!/bin/bash
+arr=(s a i a j a y o b i l i)
+n=${#arr[@]}
+for i in ${arr[@]}
+do
+n=$(( n - 1 ))
+arr[$n]=$i
+#n=$(( n - 1 ))
+done
+echo ${arr[@]}
+
+
+

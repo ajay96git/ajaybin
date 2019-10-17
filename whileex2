@@ -1,0 +1,21 @@
+#!/bin/bash
+
+arr=(s a i a j a y)
+n=${#arr[@]}
+m=0
+
+<<cmt
+while [ $n -gt  $m ] 
+do
+echo ${arr[$(( n - $(( n-m )) ))]}
+m=$((m+1))
+done
+cmt
+
+for i in ${arr[@]}
+do
+
+ echo $i
+done
+
+

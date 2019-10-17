@@ -1,0 +1,23 @@
+#!/bin/bash
+bsa=( "$@" )
+p=${#bsa[@]}
+q=0
+r=0
+s=0
+
+
+while [[ $p -gt $q ]]
+do
+	if [[ ${bsa[$q]}  -gt 25  ||  ${bsa[$q]} -eq 25 ]]; then
+		arr[$r]=${bsa[$q]}
+		r=$(( r + 1 ))
+	elif [[ ${bsa[$q]} -lt 25 ]]; then
+		arr1[$s]=${bsa[$q]}
+		s=$(( s + 1 ))
+	fi
+	q=$(( q + 1 )) 
+done	
+
+echo here the elements greater than 25:  ${arr[@]}
+echo here the elements lesser than 25: ${arr1[@]}
+

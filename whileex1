@@ -1,0 +1,7 @@
+arr=(ajay prannoy thanu ishu)
+n=${#arr[@]}
+while [ $n -gt 0 ]
+do
+echo ${arr[$n]}
+n=$(( n-1 ))
+done

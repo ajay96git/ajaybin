@@ -1,0 +1,12 @@
+#!/bin/bash
+n=$1
+while [[ $n -lt $2 ]]
+do
+	if [[ $(( n % 2 )) -eq 0 && $3 == "even" ]]; then
+		echo "number:" $n "is even"
+	elif [[ $(( n % 2 )) -ne 0 && $3 == "odd" ]]; then
+		echo "number:" $n "is odd"
+	fi
+	n=$(( n + 1 ))     
+
+done

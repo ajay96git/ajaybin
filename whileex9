@@ -1,0 +1,13 @@
+:#!/bin/bash
+arr=(s a i a j a y o b i l i p r a n n o y)
+n=${#arr[@]}
+m=0
+o=$n
+while [[ $n -gt $m ]] || [[ $n -eq $m ]]
+do
+arr1[$(( o - n ))]=${arr[$n]}
+#arr1 =${arr[$n]}
+n=$(( n - 1 ))
+done
+echo ${arr1[@]}
+

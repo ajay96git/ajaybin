@@ -1,0 +1,7 @@
+#!/bin/bash
+for var in *
+do
+
+	sed -n '5p' $var | sed 's/a/ajay/2' >> sedout1
+
+done

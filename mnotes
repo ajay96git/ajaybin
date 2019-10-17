@@ -1,0 +1,5 @@
+if [[ $1 -eq 500 ]];then
+	
+	echo "enter the curency" : $1
+        echo 5 100 notes
+fi

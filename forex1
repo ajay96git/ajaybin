@@ -1,0 +1,8 @@
+#!/bin/bash
+arr="s a i a j a y p r a n n o y t h a n u"
+#n=${#arr[@]}
+for i in ${arr[@]}
+do
+echo $i
+#n=$(( n - 1 ))
+done

@@ -1,0 +1,16 @@
+#! /bin/bash
+if [[ ($1 -eq 1 && $2 -gt 800000 && $2 -lt 1000000 && $3 == "no")  || ($1 -eq 1 && $2 -gt 600000 && $2 -lt 700000 && $3 == "no") ]]; then
+		
+		echo "90000 bonus for employee who earning 8-10 lakhs"
+		echo "50000 bonus for employee who earning 6-7 lakhs"
+	
+	
+elif [[  $1 -eq 2 && $2 -gt 500000 && $2 -lt 600000 && $3 == "no"  || $1 -eq 2 && $2 -gt 300000 && $2 -lt 400000 && $3 == "no" ]]; then
+			
+		 echo "30000 bonus for employee who earning 5-6 lakhs"
+                 echo "20000 bonus for employee who earning 3-4 lakhs"
+        else
+                echo "bonus is not required"
+fi
+
+   
