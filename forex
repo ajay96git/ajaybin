@@ -3,4 +3,5 @@ arr=(ajay prannoy thanu ishu ajay gnan siddhu ajay AJAY)
 for name in $(seq 0 3)
 do
  echo ${arr[ $(( 0 + name ))]}
+# this is for git modification
 done
