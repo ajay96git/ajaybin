@@ -12,6 +12,5 @@ if [[ 1 -eq 1 && 1 -eq 0  ||  1 -eq 0 &&  1 -eq 1  ]]; then
 	echo "this is from condition block with no grouping"
 else
 	echo "this is from else block with no grouping"
-	:
 
 fi    
