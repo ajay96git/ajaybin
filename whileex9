@@ -1,4 +1,4 @@
-:#!/bin/bash
+#!/bin/bash
 arr=(s a i a j a y o b i l i p r a n n o y)
 n=${#arr[@]}
 m=0

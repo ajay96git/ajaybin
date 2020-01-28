@@ -17,5 +17,5 @@ echo " "
 echo " "
 
 smplefn sudhakar gopal 
-echo $1
+echo $1 $2
 

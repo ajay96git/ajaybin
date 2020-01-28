@@ -1,4 +1,14 @@
-1st commit in local repo
-2nd commit in local repo
-3rd commit in local repo
-4th commit in local repo
+#!/bin/bash
+arr=(ajay prannoy thanu ishu ajay gnan siddhu ajay AJAY)
+for name in $(seq 0 3)
+do
+echo ${arr[ $(( 0 + name ))]}
+# this is for git modification
+done
+#!/bin/bash
+arr=(ajay prannoy thanu ishu ajay gnan siddhu ajay AJAY)
+for name in $(seq 0 3)
+do
+echo ${arr[ $(( 0 + name ))]}
+# this is for git modification
+done
